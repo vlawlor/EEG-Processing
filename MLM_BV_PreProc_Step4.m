@@ -117,7 +117,7 @@ for i = 1:length(subjects);
     if length(badchans) > 0
         % Interplotate the bad channels.
         fprintf('Interpolating bad channels for subject %s ',subjects{i})
-        EEG = eeg_interp(EEG,badchans{i});
+        EEG = eeg_interp(EEG,badchans_new{i});
         setname = sprintf('%s_itp',setname);
     else
         setname = sprintf('%s_noitp',setname);
